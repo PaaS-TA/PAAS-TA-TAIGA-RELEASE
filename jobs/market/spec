@@ -1,0 +1,10 @@
+---
+name: market
+
+templates:
+	market_ctl.erb: bin/market_ctl
+
+packages:
+	- market
+
+properties: {}
