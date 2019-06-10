@@ -2,10 +2,10 @@
 name: market
 
 templates:
-	bin/market_ctl.erb: bin/market_ctl
+ bin/market_ctl.erb: bin/market_ctl
 
 packages:
-	- java
-	- market
+ - java
+ - market
 
 properties: {}
