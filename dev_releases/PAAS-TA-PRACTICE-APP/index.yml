@@ -1,6 +1,0 @@
-builds:
-  a5624850-9386-43f4-6179-837edef4fcd3:
-    version: 0+dev.1
-  fe372fd1-a229-4647-67fc-24416afa1ca2:
-    version: 1.0
-format-version: "2"
