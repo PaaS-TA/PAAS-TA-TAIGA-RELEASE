@@ -1,5 +1,5 @@
 name: market-app-release
-version: 0+dev.1
+version: 1.0
 commit_hash: f8c50d7
 uncommitted_changes: false
 jobs:
