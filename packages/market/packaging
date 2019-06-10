@@ -1,0 +1,6 @@
+set -e
+
+JAR_DIR_NAME=market_app
+JAR_NAME=myapp-0.0.1-SNAPSHOT
+
+cp $JAR_DIR_NAME/$JAR_NAME.war ${BOSH_INSTALL_TARGET}

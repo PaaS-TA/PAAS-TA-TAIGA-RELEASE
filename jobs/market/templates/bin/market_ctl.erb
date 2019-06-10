@@ -1,0 +1,51 @@
+﻿#!/bin/bash
+
+set -e
+
+JOB_NAME="market"
+JOB_DIR="/var/vcap/jobs/${JOB_NAME}"
+PKG_DIR="/var/vcap/packages/${JOB_NAME}"
+JAVA_DIR="/var/vcap/packages/java"
+JAR_NAME="myapp-0.0.1-SNAPSHOT"
+
+export JOB_NAME
+source /var/vcap/jobs/${JOB_NAME}/helpers/ctl_setup.sh $JOB_NAME
+
+export JOB_DIR
+export PKG_DIR
+export JAVA_DIR
+
+case $1 in
+
+  start)
+    echo "starting :: ${JOB_NAME}"
+    pid_guard $PIDFILE $JOB_NAME
+
+    sudo chmod 755 ${JOB_DIR}/script/*
+
+    echo "Starting 1 :: PIDFILE :: $PIDFILE"
+    echo "Starting 2 :: JOB_NAME :: $JOB_NAME"
+    echo "Starting 3 :: JOB_DIR :: $JOB_DIR"
+    echo "Starting 5 :: PKG_DIR :: $PKG_DIR"
+    echo "Starting 6 :: JAVA_DIR :: $JAVA_DIR"
+
+    exec $JAVA_DIR/bin/java -cp "${PKG_DIR}/${JAR_NAME}.war"  \
+                  >>$LOG_DIR/$JOB_NAME.stdout.log \
+                  2>>$LOG_DIR/$JOB_NAME.stderr.log &
+
+    echo $! > $PIDFILE
+
+    echo "starting 7 :: PIDFILE :: $PIDFILE"
+    echo "SUCCESS :: starting :: ${JOB_NAME}"
+    ;;
+  stop)
+
+    kill_and_wait $PIDFILE
+    ;;
+
+  *)
+    echo "usage: market_ctl.erb {start|stop}"
+    ;;
+
+esac
+exit 0

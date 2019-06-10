@@ -1,0 +1,7 @@
+---
+name: market
+
+dependencies: []
+
+files:
+- market_app/myapp-0.0.1-SNAPSHOT.war

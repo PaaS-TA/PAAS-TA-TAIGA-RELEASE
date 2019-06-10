@@ -5,6 +5,7 @@ templates:
 	market_ctl.erb: bin/market_ctl
 
 packages:
+	- java
 	- market
 
 properties: {}
