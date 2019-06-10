@@ -1,0 +1,20 @@
+name: market-app-release
+version: "1.0"
+commit_hash: 62d418d
+uncommitted_changes: false
+jobs:
+- name: market
+  version: 2b0d1d6c5756acfc4c55ac755123bb789cc52d1c
+  fingerprint: 2b0d1d6c5756acfc4c55ac755123bb789cc52d1c
+  sha1: b4cfbd03d7fe0b1a174d05964e8c549b146c187d
+packages:
+- name: java
+  version: ff2f41ddf3802274a43dc63e07163f4a530fff74
+  fingerprint: ff2f41ddf3802274a43dc63e07163f4a530fff74
+  sha1: f7768f54d0c2984bc305cb5bfbd7ef257bdfdfaf
+  dependencies: []
+- name: market
+  version: 3852825724a96a2aa214e8db49d8f4bdd34aebd1
+  fingerprint: 3852825724a96a2aa214e8db49d8f4bdd34aebd1
+  sha1: 7434ff1137c47345751c4d24e97371193fbf6596
+  dependencies: []
