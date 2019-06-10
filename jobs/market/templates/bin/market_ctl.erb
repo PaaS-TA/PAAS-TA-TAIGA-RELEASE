@@ -9,7 +9,7 @@ JAVA_DIR="/var/vcap/packages/java"
 JAR_NAME="myapp-0.0.1-SNAPSHOT"
 
 export JOB_NAME
-source /var/vcap/jobs/${JOB_NAME}/helpers/ctl_setup.sh $JOB_NAME
+source /var/vcap/jobs/${JOB_NAME}/templates/helpers/ctl_setup.sh $JOB_NAME
 
 export JOB_DIR
 export PKG_DIR
@@ -31,9 +31,6 @@ case $1 in
                   >>$LOG_DIR/$JOB_NAME.stdout.log \
                   2>>$LOG_DIR/$JOB_NAME.stderr.log &
 
-    echo $! > $PIDFILE
-
-    echo "starting 7 :: PIDFILE :: $PIDFILE"
     echo "SUCCESS :: starting :: ${JOB_NAME}"
     ;;
   stop)
