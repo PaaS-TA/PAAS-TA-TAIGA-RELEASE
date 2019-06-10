@@ -20,4 +20,7 @@ builds:
   be2cdca9bda91458dc4dc72d40220cf9c817cc21:
     version: be2cdca9bda91458dc4dc72d40220cf9c817cc21
     sha1: ab97552ef0fd270507e375fa875efeac95439dff
+  e75cc4593dbddb0cdc5b281f9a238e74d1f12091:
+    version: e75cc4593dbddb0cdc5b281f9a238e74d1f12091
+    sha1: 660227a41755982d04b0706e93aa33729fc21d56
 format-version: "2"
