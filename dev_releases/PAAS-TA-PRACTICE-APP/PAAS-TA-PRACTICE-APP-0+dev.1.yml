@@ -1,0 +1,20 @@
+name: PAAS-TA-PRACTICE-APP
+version: 0+dev.1
+commit_hash: abf374e
+uncommitted_changes: false
+jobs:
+- name: market
+  version: 2e130dd3b6f3e60ed2d849c7509342bc32635a6b
+  fingerprint: 2e130dd3b6f3e60ed2d849c7509342bc32635a6b
+  sha1: 0662c8638e7c50c127655f2c0dedd1e15645dc6c
+packages:
+- name: java
+  version: ff2f41ddf3802274a43dc63e07163f4a530fff74
+  fingerprint: ff2f41ddf3802274a43dc63e07163f4a530fff74
+  sha1: 6a87dd750732c783002b56469cba0090b17ca921
+  dependencies: []
+- name: market
+  version: 3852825724a96a2aa214e8db49d8f4bdd34aebd1
+  fingerprint: 3852825724a96a2aa214e8db49d8f4bdd34aebd1
+  sha1: 6e384b004e2a8b0dbef80fd6aa7c3ee0602a46a0
+  dependencies: []
