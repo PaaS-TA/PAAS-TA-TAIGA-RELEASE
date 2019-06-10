@@ -1,5 +1,5 @@
-name: PAAS-TA-PRACTICE-APP
-version: 0+dev.2
+name: market-sample-release
+version: 1.0
 commit_hash: 488cb5e
 uncommitted_changes: false
 jobs:
