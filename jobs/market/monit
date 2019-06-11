@@ -1,5 +1,5 @@
 check process market
- with pidfile /var/vcap/sys/run/market/market.pid
- start program "/var/vcap/jobs/market/bin/monit_debugger market_ctl '/var/vcap/jobs/market/bin/market_ctl start'"
- stop program "/var/vcap/jobs/market/bin/monit_debugger market_ctl '/var/vcap/jobs/market/bin/market_ctl stop'"
- group vcap
+  with pidfile /var/vcap/sys/run/market/market.pid
+  start program "/var/vcap/jobs/market/bin/monit_debugger market_ctl '/var/vcap/jobs/market/bin/market_ctl start'"
+  stop program "/var/vcap/jobs/market/bin/monit_debugger market_ctl '/var/vcap/jobs/market/bin/market_ctl stop'"
+  group vcap
