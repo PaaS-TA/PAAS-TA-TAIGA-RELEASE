@@ -1,0 +1,20 @@
+name: taiga-release
+version: "0.2"
+commit_hash: f32421c
+uncommitted_changes: false
+jobs:
+- name: taiga
+  version: d17ba070ac9485f9f030d97ec14929c33393048b
+  fingerprint: d17ba070ac9485f9f030d97ec14929c33393048b
+  sha1: a9a0741b2a320591c44f4bd7985d2ca99e41357a
+packages:
+- name: taiga-back
+  version: 2e88f7c7022546e8f6ce1a13d08c61487c86e3bc
+  fingerprint: 2e88f7c7022546e8f6ce1a13d08c61487c86e3bc
+  sha1: bcd84a0a94d388b31945703b5a7cd33b9c26ec0d
+  dependencies: []
+- name: taiga-front
+  version: 37c17bf58546e23aea00caccf5cac8fbbbfa6e43
+  fingerprint: 37c17bf58546e23aea00caccf5cac8fbbbfa6e43
+  sha1: 8e8578eb38a67226c5449863a70eb8dc86b048ad
+  dependencies: []
