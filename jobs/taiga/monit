@@ -1,0 +1,5 @@
+check process taiga
+  with pidfile /var/vcap/sys/run/taiga/taiga.pid
+  start program "/var/vcap/jobs/taiga/bin/monit_debugger taiga_ctl '/var/vcap/jobs/taiga/bin/taiga_ctl start'"
+  stop program "/var/vcap/jobs/taiga/bin/monit_debugger taiga_ctl '/var/vcap/jobs/taiga/bin/taiga_ctl stop'"
+  group vcap

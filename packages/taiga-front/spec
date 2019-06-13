@@ -1,0 +1,7 @@
+---
+name: taiga-front
+
+dependencies: []
+
+files:
+- taiga-front/taiga-front.tar.gz

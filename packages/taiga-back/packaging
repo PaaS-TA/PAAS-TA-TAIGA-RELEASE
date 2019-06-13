@@ -1,0 +1,9 @@
+set -e
+
+TAR_DIR_NAME=taiga-back
+TAR_NAME=taiga-back
+
+tar xfz $TAR_DIR_NAME/$TAR_NAME.tar.gz
+(
+ cp -a taiga-back ${BOSH_INSTALL_TARGET}
+)

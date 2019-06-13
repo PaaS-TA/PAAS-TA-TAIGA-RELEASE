@@ -1,0 +1,28 @@
+---
+name: taiga
+
+templates:
+  bin/taiga_ctl.erb: bin/taiga_ctl
+  bin/monit_debugger: bin/monit_debugger
+  data/properties.sh: data/properties.sh
+  helpers/ctl_setup.sh: helpers/ctl_setup.sh
+  helpers/ctl_utils.sh: helpers/ctl_utils.sh
+  #for taiga
+  devel/scripts/setup-apt.sh: devel/scripts/setup-apt.sh
+  devel/scripts/setup-buildessential.sh: devel/scripts/setup-buildessential.sh
+  devel/scripts/setup-circus.sh: devel/scripts/setup-circus.sh
+  devel/scripts/setup-config.sh: devel/scripts/setup-config.sh
+  devel/scripts/setup-nginx.sh: devel/scripts/setup-nginx.sh
+  devel/scripts/setup-postgresql.sh: devel/scripts/setup-postgresql.sh
+  devel/scripts/setup-python.sh: devel/scripts/setup-python.sh
+  devel/scripts/setup-frontend.sh: devel/scripts/setup-frontend.sh
+  #taiga start
+  devel/setup-server.sh: devel/setup-server.sh
+  devel/setup-devel.sh: devel/setup-devel.sh
+
+
+packages:
+  - taiga-front
+  - taiga-back
+
+properties: {}
