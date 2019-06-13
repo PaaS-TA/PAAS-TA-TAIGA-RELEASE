@@ -5,5 +5,5 @@ TAR_NAME=taiga-front
 
 tar xfz $TAR_DIR_NAME/$TAR_NAME.tar.gz
 (
- cp -a taiga-front ${BOSH_INSTALL_TARGET}
+ cp -a taiga-front/* ${BOSH_INSTALL_TARGET}
 )
