@@ -2,7 +2,7 @@
 
 BACKEND_VERSION="stable"
 
-pushd ${PKG_DIR}
+pushd ${HOME}
 
 cat > /tmp/settings.py <<EOF
 from .common import *
@@ -29,12 +29,12 @@ SERVER_EMAIL = DEFAULT_FROM_EMAIL
 
 EOF
 
-if [ ! -e ${PKG_DIR}/taiga-back ]; then
+if [ ! -e ${HOME}/taiga-back ]; then
     createdb-if-needed taiga
 #    git clone https://github.com/taigaio/taiga-back.git taiga-back
 #    tar xfz /home/inception/workspace/user/kjhyun/setup-taiga-FE/taiga-back/taiga-back.tar.gz
 #    tar xfz ${PKG_DIR}/taiga-back.tar.gz
-    pushd ${PKG_DIR}/taiga-back
+    pushd ${HOME}/taiga-back
 #    git checkout -f stable
 
     # rabbit-create-user-if-needed taiga taiga  # username, password
@@ -58,7 +58,7 @@ if [ ! -e ${PKG_DIR}/taiga-back ]; then
     deactivate
     popd
 else
-    pushd ${PKG_DIR}/taiga-back
+    pushd ${HOME}/taiga-back
 #    git fetch
 #    git checkout -f stable
 #    git reset --hard origin/stable

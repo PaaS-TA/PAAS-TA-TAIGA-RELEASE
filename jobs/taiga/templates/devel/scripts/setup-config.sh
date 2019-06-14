@@ -1,6 +1,8 @@
 #!/bin/bash
 
-cat > ~/.vimrc <<EOF
+sudo apt-get install tmux
+
+cat > ${HOME}/.vimrc <<EOF
 set nocompatible
 
 set bs=2
@@ -29,7 +31,7 @@ set fileencoding=utf8
 set encoding=utf8
 EOF
 
-cat > ~/.tmux-conf.sh <<EOF
+cat > ${HOME}/.tmux-conf.sh <<EOF
 function taiga-runserver {
     session=taiga
     state=\$(tmux ls 2>/dev/null)
@@ -48,12 +50,12 @@ function taiga-runserver {
 function taiga-runserver-back {
     circusctl stop taiga
     workon taiga
-    cd ~/taiga-back
+    cd ${HOME}/taiga-back
     python manage.py runserver 127.0.0.1:8001
 }
 EOF
 
-cat > ~/.bash_profile <<EOF
+cat > ${HOME}/.bash_profile <<EOF
 [[ -s "\$HOME/.profile" ]] && source "\$HOME/.profile" # Load the default .profile
 [[ -s "\$HOME/.ruby-conf.sh" ]] && source "\$HOME/.ruby-conf.sh"
 [[ -s "\$HOME/.tmux-conf.sh" ]] && source "\$HOME/.tmux-conf.sh"

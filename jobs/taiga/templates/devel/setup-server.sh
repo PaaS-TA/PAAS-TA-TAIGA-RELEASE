@@ -5,8 +5,8 @@
 #  exit 1
 #fi
 
-source /var/vcap/jobs/${JOB_NAME}/devel/setup-devel.sh
+su root -c "/var/vcap/jobs/${JOB_NAME}/devel/setup-devel.sh"
 
 # Post Setup Services
-source /var/vcap/jobs/${JOB_NAME}/devel/scripts/setup-circus.sh
-source /var/vcap/jobs/${JOB_NAME}/devel/scripts/setup-nginx.sh
+su root -c "/var/vcap/jobs/${JOB_NAME}/devel/scripts/setup-circus.sh"
+su root -c "/var/vcap/jobs/${JOB_NAME}/devel/scripts/setup-nginx.sh"

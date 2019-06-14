@@ -4,17 +4,28 @@ set -e
 JOB_NAME="taiga"
 JOB_DIR="/var/vcap/jobs/${JOB_NAME}"
 PKG_DIR="/var/vcap/packages/${JOB_NAME}"
-JAVA_DIR="/var/vcap/packages/java"
-#WAR_NAME="myapp-0.0.1-SNAPSHOT"
+HOME=/var/vcap
 
 export JOB_NAME
 export JOB_DIR
 export PKG_DIR
 export JAVA_DIR
-
+export HOME
 
 source /var/vcap/jobs/${JOB_NAME}/helpers/ctl_setup.sh $JOB_NAME
-source /var/vcap/jobs/${JOB_NAME}/devel/setup-server.sh
+cp -r ${HOME}/packages/taiga-front ${HOME}/
+cp -r ${HOME}/packages/taiga-back ${HOME}/
+chmod 775 ${JOB_DIR}/devel/setup-server.sh
+chmod 775 ${JOB_DIR}/devel/setup-devel.sh
+
+chmod 775 ${JOB_DIR}/devel/scripts/setup-config.sh
+chmod 775 ${JOB_DIR}/devel/scripts/setup-apt.sh
+chmod 775 ${JOB_DIR}/devel/scripts/setup-postgresql.sh
+chmod 775 ${JOB_DIR}/devel/scripts/setup-buildessential.sh
+chmod 775 ${JOB_DIR}/devel/scripts/setup-python.sh
+
+chmod 775 ${JOB_DIR}/devel/scripts/setup-frontend.sh
+chmod 775 ${JOB_DIR}/devel/scripts/setup-backend.sh
 
 case $1 in
 
@@ -25,8 +36,12 @@ pid_guard $PIDFILE $JOB_NAME
 echo "Starting 1 :: PIDFILE :: $PIDFILE"
 echo "Starting 2 :: JOB_NAME :: $JOB_NAME"
 echo "Starting 3 :: JOB_DIR :: $JOB_DIR"
-echo "Starting 5 :: PKG_DIR :: $PKG_DIR"
-echo "Starting 6 :: JAVA_DIR :: $JAVA_DIR"
+echo "Starting 4 :: PKG_DIR :: $PKG_DIR"
+echo "Starting 5 :: HOME :: $HOME"
+
+
+#source ${JOB_DIR}/devel/setup-server.sh
+su root -c "${JOB_DIR}/devel/setup-server.sh"
 
 #exec $JAVA_DIR/bin/java -cp "${PKG_DIR}/${WAR_NAME}.war" org.springframework.boot.loader.WarLauncher \
 #>>$LOG_DIR/$JOB_NAME.stdout.log \

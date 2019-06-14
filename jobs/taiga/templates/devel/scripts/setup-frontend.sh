@@ -2,7 +2,7 @@
 
 FRONTEND_VERSION="stable"
 
-pushd ${PKG_DIR}
+pushd ${HOME}
 
 cat > /tmp/conf.json <<EOF
 {
@@ -25,7 +25,7 @@ EOF
 #    git clone https://github.com/taigaio/taiga-front-dist.git taiga-front
 #    tar xfz /home/inception/workspace/user/kjhyun/setup-taiga-FE/taiga-front/taiga-front.tar.gz
 #    tar xfz ${PKG_DIR}/taiga-front.tar.gz
-    pushd ${PKG_DIR}/taiga-front
+    pushd ${HOME}/taiga-front
 #    git checkout -f stable
 
     mv /tmp/conf.json dist/
