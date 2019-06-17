@@ -1,5 +1,10 @@
 #!/bin/bash
-
+echo ************setup-config
+echo ${JOB_NAME}
+echo ${JOB_DIR}
+echo ${PKG_DIR}
+echo ${HOME}
+echo ************config
 sudo apt-get install tmux
 
 cat > ${HOME}/.vimrc <<EOF

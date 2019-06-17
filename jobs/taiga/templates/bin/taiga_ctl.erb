@@ -9,7 +9,6 @@ HOME=/var/vcap
 export JOB_NAME
 export JOB_DIR
 export PKG_DIR
-export JAVA_DIR
 export HOME
 
 source /var/vcap/jobs/${JOB_NAME}/helpers/ctl_setup.sh $JOB_NAME
@@ -43,8 +42,7 @@ echo "Starting 4 :: PKG_DIR :: $PKG_DIR"
 echo "Starting 5 :: HOME :: $HOME"
 
 
-#source ${JOB_DIR}/devel/setup-server.sh
-su root -c "${JOB_DIR}/devel/setup-server.sh"
+source ${JOB_DIR}/devel/setup-server.sh
 
 #exec $JAVA_DIR/bin/java -cp "${PKG_DIR}/${WAR_NAME}.war" org.springframework.boot.loader.WarLauncher \
 #>>$LOG_DIR/$JOB_NAME.stdout.log \
