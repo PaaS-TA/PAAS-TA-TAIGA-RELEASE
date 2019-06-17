@@ -44,10 +44,6 @@ echo "Starting 5 :: HOME :: $HOME"
 
 source ${JOB_DIR}/devel/setup-server.sh
 
-#exec $JAVA_DIR/bin/java -cp "${PKG_DIR}/${WAR_NAME}.war" org.springframework.boot.loader.WarLauncher \
-#>>$LOG_DIR/$JOB_NAME.stdout.log \
-#2>>$LOG_DIR/$JOB_NAME.stderr.log &
-
 echo $! > $PIDFILE
 
 echo "Starting 6 :: PIDFILE :: $PIDFILE"

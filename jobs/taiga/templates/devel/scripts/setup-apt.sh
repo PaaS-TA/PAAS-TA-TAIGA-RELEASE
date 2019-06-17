@@ -20,5 +20,8 @@ function package-not-installed {
 }
 
 sudo apt-get -y update
+sudo rm -rf /var/lib/apt/*
 sudo apt-get -y upgrade
+sudo rm -rf /var/lib/apt/* 
 sudo apt-get -y dist-upgrade
+sudo rm -rf /var/lib/apt/*

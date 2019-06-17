@@ -1,5 +1,4 @@
 # postgresql.sh
-HOME=/var/vcap
 function createdb-if-needed {
     for dbname in $@; do
         $(psql -l | grep -q "$dbname") || createdb "$dbname"
